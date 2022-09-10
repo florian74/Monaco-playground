@@ -1,0 +1,90 @@
+{
+  "name": "Monaco Editor Error",
+  "jest": {
+    "collectCoverageFrom": [
+    ],
+    "transformIgnorePatterns": [
+      
+    ],
+    "moduleNameMapper":{
+    },
+    "coverageThreshold": {
+      "global": {
+        "branches": 80,
+        "functions": 90,
+        "lines": 92,
+        "statements": 92
+      }
+    }
+  },
+  "version": "0.26.0",
+  "private": true,
+  "dependencies": {
+    "@emotion/react": "^11.10.4",
+    "@emotion/styled": "^11.10.4",
+    "@hookform/resolvers": "^2.9.7",
+    "@monaco-editor/react": "^4.4.5",
+    "@mui/icons-material": "^5.10.3",
+    "@mui/lab": "^5.0.0-alpha.97",
+    "@mui/material": "^5.10.3",
+    "@mui/x-date-pickers": "^5.0.0-beta.7",
+    "axios": "^0.27.2",
+    "clsx": "^1.2.1",
+    "fast-deep-equal": "^3.1.3",
+    "luxon": "^3.0.3",
+    "query-string": "^7.1.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-hook-form": "^7.34.2",
+    "react-query": "^3.39.2",
+    "react-router-dom": "^6.3.0",
+    "react-scripts": "^5.0.1",
+    "react-toastify": "^9.0.8",
+    "react-use-websocket": "^4.2.0",
+    "react-virtual": "^2.10.4",
+    "reconnecting-websocket": "^4.4.0",
+    "typescript": "^4.8.2",
+    "use-debounce": "^8.0.4",
+    "use-query-params": "^2.1.0",
+    "uuid": "^8.3.2",
+    "yup": "^0.32.11"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "lint": "eslint 'src/**/*.{js,ts,tsx}' --max-warnings=0",
+    "prettier:ci": "prettier --config ./.prettierrc --check 'src/**/*.{js,ts,tsx}'",
+    "test:ci": "CI=true react-scripts test --maxWorkers=2 --coverage",
+    "e2e": "docker run -it -e CYPRESS_baseUrl=http://host.docker.internal:3000 -v $PWD:/e2e -w /e2e cypress/included:4.11.0",
+    "e2e:ci": "docker run -v $PWD:/e2e -w /e2e cypress/included:4.11.0",
+    "preversion": "npm run test:ci",
+    "postversion": "git push && git push --tags"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not op_mini all"
+  ],
+  "devDependencies": {
+    "@hookform/devtools": "^4.2.2",
+    "@loadable/component": "^5.15.2",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.3.0",
+    "@testing-library/user-event": "^14.4.3",
+    "@types/jest": "^29.0.0",
+    "@types/loadable__component": "^5.13.4",
+    "@types/luxon": "^3.0.1",
+    "@types/node": "^18.7.14",
+    "@types/react": "^18.0.18",
+    "@types/react-dom": "^18.0.6",
+    "@types/react-router-dom": "^5.3.3",
+    "@types/uuid": "^8.3.4",
+    "jest-websocket-mock": "^2.4.0",
+    "mock-socket": "^9.1.5",
+    "msw": "^0.46.0",
+    "prettier": "^2.7.1",
+    "prettier-plugin-organize-imports": "^3.1.0"
+  }
+}
